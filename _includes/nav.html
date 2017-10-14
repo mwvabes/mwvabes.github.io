@@ -1,5 +1,5 @@
 <header>
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" style="z-index: 2;">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -15,7 +15,7 @@
         <li {% if page.url == '/' %}class="active"{% endif %}><a href="index.html">Główna</a></li>
         <li {% if page.url == '/kontakt.html' %}class="active"{% endif %}><a href="kontakt.html">Kontakt</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+      <!--<ul class="nav navbar-nav navbar-right">
         <li><a href="#">Link</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -27,7 +27,7 @@
             <li><a href="#">Separated link</a></li>
           </ul>
         </li>
-      </ul>
+      </ul>-->
     </div>
   </div>
 </nav>
