@@ -32,14 +32,19 @@ a {
 }
 
 .main {
-   position: absolute;
-   top: 0;
+   position: relative;
    left: 0;
+   right: 0;
    width: 100%;
-   height: 32em;
+   height: 22em;
    background-color: #2daebf;
+   background-image: url(../img/bg.jpg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
    z-index: 1;
    color: #FFF;
+   overflow: hidden;
 }
 
 .main > .container {
@@ -49,6 +54,10 @@ a {
 .main > .container > h1 {
    font-weight: 800;
    font-size: 42px;
+}
+
+.navbar {
+   margin-bottom: 0px;
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
@@ -81,6 +90,16 @@ a {
 
 .nav > .nav-icon > a > i.n-github {
    font-size: 36px;
+}
+
+.hello-text {
+   position: relative;
+   margin-bottom: 20px;
+   color: #FFF;
+   font-weight: 700;
+   margin-top: 1.7em;
+   font-size: 60px;
+   z-index: 2;
 }
 
 
