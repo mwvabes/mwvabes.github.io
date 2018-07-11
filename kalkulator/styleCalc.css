@@ -11,32 +11,47 @@ body {
   margin-top: 40px; }
 
 h1 {
-  font-size: 26px; }
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
 
 h2 {
-  font-size: 22px; }
+  font-size: 1.85rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
 
 h3 {
-  font-size: 20px; }
+  font-size: 1.70rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
 
 h4 {
-  font-size: 18px; }
+  font-size: 1.55rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
 
 h5 {
-  font-size: 16px; }
+  font-size: 1.40rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
 
 h6 {
-  font-size: 14px; }
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
 
 a {
   color: #087e48; }
+
+ul {
+  padding-right: 40px; }
 
 .menuBar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 40px;
+  min-height: 40px;
   background-color: #e2e2e2;
   text-align: center;
   vertical-align: middle;
@@ -52,11 +67,31 @@ a {
   margin: 0px auto;
   padding-top: 10px; }
 
+.menuLink {
+  font-size: 1rem;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 1px solid #00b200;
+  display: inline-block;
+  margin-top: 5px;
+  text-decoration: none;
+  border-radius: 15px;
+  -webkit-transition: background-color 200ms linear;
+  -moz-transition: background-color 200ms linear;
+  -o-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear; }
+
+.menuLink:hover {
+  background-color: #00b200;
+  color: #FFF; }
+
 .container {
   margin: 0px auto;
   padding: 5px;
-  margin-bottom: 20px;
-  width: 960px; }
+  margin-bottom: 20px; }
 
 .course-handler {
   background-color: #efefef;
@@ -73,9 +108,18 @@ a {
   width: 50%;
   margin: 0px auto; }
 
-.courseTableOutput {
-  width: 100%;
-  table-layout: auto; }
+.availableCalculators {
+  text-align: center; }
+
+.availableCalculators, td {
+  border: 1px solid #adadad;
+  border-collapse: collapse;
+  table-layout: fixed;
+  padding: 10px;
+  margin: 0px auto; }
+
+.availableCalculators tr:first-child {
+  color: #0062ff; }
 
 .courseTableOutput, td {
   width: -webkit-fill-available;
@@ -100,9 +144,58 @@ a {
   width: -o-max-content;
   width: -ms-max-content;
 }*/
+@media only screen and (min-width: 721px) {
+  .container {
+    width: 960px; }
+
+  .courseTableOutput {
+    width: 100%;
+    table-layout: auto; }
+
+  .noInfo {
+    font-size: 0.75rem; }
+
+  .additionalExam {
+    font-size: 0.75rem; } }
 @media only screen and (max-width: 720px) {
+  h1 {
+    font-size: 1.4rem; }
+
+  h2 {
+    font-size: 1.35rem; }
+
+  h3 {
+    font-size: 1.3rem; }
+
+  h4 {
+    font-size: 1.25rem; }
+
+  h5 {
+    font-size: 1.2rem; }
+
+  h6 {
+    font-size: 1.15rem; }
+
   .course-table {
-    width: 100%; } }
+    width: 100%; }
+
+  .container {
+    width: 100%; }
+
+  .courseTableOutput {
+    width: 100%;
+    table-layout: auto;
+    font-size: 0.75rem; }
+
+  .courseTableOutput, td {
+    padding: 2px; }
+
+  .courseTableOutput td:first-child {
+    display: none; }
+
+  .noInfo, .additionalExam {
+    font-size: 0.45rem;
+    display: inline-block; } }
 .courseTableInput tr:nth-of-type(n+3) td:nth-child(2) {
   font-size: 0.75rem; }
 
@@ -213,7 +306,6 @@ a {
   border-bottom: 5px solid #e2e2e2; }
 
 .noInfo {
-  font-size: 0.75rem;
   color: #132b7e;
   padding: 2px 5px 2px 5px;
   background-color: #f4f4f4; }
@@ -226,7 +318,6 @@ a {
   font-weight: bold; }
 
 .additionalExam {
-  font-size: 0.75rem;
   padding: 2px 5px 2px 5px;
   color: #132b7e;
   background-color: #e2e2e2;
@@ -234,7 +325,7 @@ a {
 
 .footer {
   font-size: 0.75rem;
-  color: #7b7b7b;
+  color: #4b4b4b;
   width: 100%; }
 
 .footer > .container {
@@ -256,7 +347,9 @@ a {
 .logo {
   margin: 0px auto;
   max-height: 160px;
-  text-align: center; }
+  max-width: 70%;
+  text-align: center;
+  display: inline; }
 
 .info > a {
   color: #132b7e; }
@@ -286,14 +379,15 @@ a {
   text-align: center; }
 
 .alert > .container {
-  background-color: #f4f4f4; }
+  background-color: #ffd37f; }
 
-.alert > .container > h3 {
+.alert > .container > h5 {
   text-align: center;
   color: #8e0000;
   max-width: 80%;
   margin: 0px auto;
-  padding-top: 10px; }
+  padding-top: 10px;
+  font-weight: 400; }
 
 .alert > .container > p {
   text-align: center;
@@ -323,7 +417,8 @@ a {
 
 .welcomeInfo {
   color: #7b7b7b;
-  width: 100%; }
+  width: 100%;
+  margin-top: 20px; }
 
 .welcomeInfo > .container {
   text-align: center;
@@ -340,4 +435,4 @@ a {
   margin: 0px auto;
   padding: 15px; }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styleCalc.css.map */
