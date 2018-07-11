@@ -280,6 +280,25 @@ a {
 .menu > .container > h1 {
   text-align: center; }
 
+.alert {
+  color: #7b7b7b;
+  width: 100%;
+  text-align: center; }
+
+.alert > .container {
+  background-color: #f4f4f4; }
+
+.alert > .container > h3 {
+  text-align: center;
+  color: #8e0000;
+  max-width: 80%;
+  margin: 0px auto;
+  padding-top: 10px; }
+
+.alert > .container > p {
+  text-align: center;
+  color: #132b7e; }
+
 .quote {
   color: #7b7b7b;
   width: 100%; }
@@ -310,5 +329,15 @@ a {
   text-align: center;
   color: #132b7e;
   background-color: #f4f4f4; }
+
+.footerInfo > .container {
+  background-color: #f4f4f4; }
+
+.footerInfo > .container > p {
+  text-align: center;
+  color: #132b7e;
+  max-width: 80%;
+  margin: 0px auto;
+  padding: 15px; }
 
 /*# sourceMappingURL=style.css.map */
