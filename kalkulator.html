@@ -1,0 +1,351 @@
+---
+layout: default
+title: Mwvabes Portfolio
+page.url: index.html
+---
+
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Kalkulator punktów rekrutacyjnych, Politechnika Rzeszowska">
+  <meta name="keywords" content="kalkulator,punktów,politechnika,rzeszowska,rekrutacja,obliczenie">
+  <meta name="author" content="vabes.pl">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>PRz | Kalkulator by Vabes</title>
+  
+  <link rel="stylesheet" href="calcStyle.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700i" rel="stylesheet"> 
+
+</head>
+<body>
+
+<div class="menuBar">
+  <p></p>
+</div>
+
+<div class="welcomeInfo">
+  <div class="container">
+    <h1>
+      Kalkulator punktów rekrutacyjnych Politechniki Rzeszowskiej by <a href="http://vabes.pl">vabes.pl</a>
+    </h1>
+  </div>
+</div>
+
+<div class="logo">
+  <div class="container">
+    <a href="https://prz.edu.pl" target="_blank"><img src="img/prz.jpg" alt="Logo Politechniki Rzeszowskiej" class="logo" /></a>
+  </div>
+</div>
+
+<div class="quote">
+  <div class="container">
+    <p class="quoteContent">„Ucz się tak, jakbyś niczego jeszcze nie osiągnął, i lękaj się, byś nie stracił tego, co już osiągnąłeś.”</p>
+    <p class="quoteAuthor">- Konfucjusz</p>
+  </div>
+</div>
+
+<div class="info">
+  <div class="container">
+    <h1>Informacja</h1>
+    <ul>
+      <li>Strona nie korzysta z cookies i nie zbiera informacji o wynikach maturalnych abiturientów.</li>
+      <li>Informacje dostępne na stronie mają charakter informacyjny i nie dają gwarancji dostania się na wybrane studia.</li>
+      <li>Autor strony nie ponosi odpowiedzialności za szkody powstałe w wyniku działania Kalkulatora.</li>
+    </ul>
+    <ul>
+      <li>Jeśli chcesz, aby Kalkulator obsługiwał również inne uczelnie, wyślij sugestię na <span class="mail">kontakt.vabes@gmail.com</span></li>
+      <li>Jeśli znajdziesz błąd w Kalkulatorze, napisz na maila <span class="mail">kontakt.vabes@gmail.com</span></li>
+    </ul>
+    <ul>
+      <li>Informacje o kierunkach i progach punktowych pochodzą z informatora uczelnianego dostępnego na stronie internetowej uczelni.</li>
+      <li>Aktualność danych z dnia <span class="infoCurrency">1 lipca 2018</span>.</li>
+      <li><a href="https://prz.edu.pl" target="_blank">Strona internetowa PRz</a></li>
+    </ul>
+    <ul>
+      <li>Życzymy powodzenia!</li>
+    </ul>
+  </div>
+</div> <!--info-->
+
+<div class="menu">
+  <div class="container">
+    <h1>Jak korzystać z Kalkulatora?</h1>
+    <ul>
+      <li>Uzupełnij wyniki tylko tych przedmiotów, które zdawałeś na maturze. Resztę okienek pozostaw pustych.</li>
+      <li>Na tej uczelni nie są brane pod uwagę wyniki z egzaminów ustnych, nie musich ich więc wpisywać.</li>
+    </ul>
+    <ul>
+      <li>Pod Kalkulatorem znajduje się tabela z informacją o progach punktowych.</li>
+      <li>Po uzupełnieniu pól komórki tabeli zaświecą się automatycznie na odpowiedni kolor.</li>
+      <li>Kolorem <span class="outGreen">zielonym</span> oznaczone są progi punktowe w sytuacji, gdy Twój wynik punktowy jest równy lub większy od danego progu.</li>
+      <li>Kolorem <span class="outRed">czerwonym</span> oznaczone są progi punktowe w sytuacji, gdy Twój wynik punktowy jest mniejszy od danego progu.</li>
+    </ul>
+    <ul>
+      <li>Zwróć uwagę na kierunki oznaczone etykietą: <span class="additionalExam">*Obowiązuje egzamin wstępny</span>.</li>
+      <li>Do końcowego wyniku punktowego kierunków oznaczonych w powyższy sposób dolicza się również wynik z egzaminu wstępnego, którego ten Kalkulator nie bierze pod uwagę.</li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="inputs">
+
+<div class="container">
+  <form id="courseForm">
+  <table class="course-table courseTableInput" id="course-table">
+    <tr id="clearForm">
+      <td colspan="1"></td>
+      <td colspan="2"><input type="reset" value="Wyczyść pola" id="clearFormInput" class="clearFormInputRed"></td>
+    </tr>
+    <tr>
+      <td>Przedmiot</td><td>Poziom</td><td>Wynik w %</td>
+    </tr>
+    <tr class="infoInput infoInputCourseCategory">
+      <td colspan="3">Przedmioty obowiązkowe, część pisemna</td>
+    </tr>
+    <tr>
+      <td>Język polski</td><td>Podstawowy</td><td><label><input type="text" class="checkIfCorrect courseInput" maxlength="3" size="3" min="0" max="100" id="plBasic"/> %</label></td>
+    </tr>
+    <tr>
+      <td>Matematyka</td><td>Podstawowy</td><td><label><input type="text" class="checkIfCorrect courseInput" maxlength="3" size="3" min="0" max="100" id="mathBasic"/> %</label></td>
+    </tr>
+    <tr>
+      <td>Język obcy nowożytny</td><td>Podstawowy</td><td><label><input type="text" class="checkIfCorrect courseInput" maxlength="3" size="3" min="0" max="100" id="langBasic"/> %</label></td>
+    </tr>
+    <tr id="trAlert">
+      <td id="tdAlert" colspan="2"><span id="spanAlert">*Uzupełnij powyższe wyniki poprawnie!</span></td><td></td>
+    </tr>
+    <tr class="infoInput infoInputCourseCategory">
+      <td colspan="3">Przedmioty dodatkowe, część pisemna</td>
+    </tr>
+    <tr>
+      <td>Biologia</td><td>Rozszerzony</td><td><label><input type="text" maxlength="3" size="3" min="0" max="100" id="biolExt" class="courseInput"/> %</label></td>
+    </tr>
+    <tr>
+      <td>Chemia</td><td>Rozszerzony</td><td><label><input type="text" maxlength="3" size="3" min="0" max="100" id="chemExt" class="courseInput"/> %</label></td>
+    </tr>
+    <tr>
+      <td>Filozofia</td><td>Rozszerzony</td><td><label><input type="text" maxlength="3" size="3" min="0" max="100" id="philExt" class="courseInput"/> %</label></td>
+    </tr>
+    <tr>
+      <td>Fizyka</td><td>Rozszerzony</td><td><label><input type="text" maxlength="3" size="3" min="0" max="100" id="physExt" class="courseInput"/> %</label></td>
+    </tr>
+    <tr>
+      <td>Geografia</td><td>Rozszerzony</td><td><label><input type="text" maxlength="3" size="3" min="0" max="100" id="geoExt" class="courseInput"/> %</label></td>
+    </tr>
+    <tr>
+      <td>Historia / Historia sztuki</td><td>Rozszerzony</td><td><label><input type="text" maxlength="3" size="3" min="0" max="100" id="histExt" class="courseInput"/> %</label></td>
+    </tr>
+    <tr>
+      <td>Informatyka</td><td>Rozszerzony</td><td><label><input type="text" maxlength="3" size="3" min="0" max="100" id="csciExt" class="courseInput"/> %</label></td>
+    </tr>
+    <tr>
+      <td>Język obcy nowożytny</td><td>Rozszerzony</td><td><label><input type="text" maxlength="3" size="3" min="0" max="100" id="langExt" class="courseInput"/> %</label></td>
+    </tr>
+    <tr>
+      <td>Język polski</td><td>Rozszerzony</td><td><label><input type="text" maxlength="3" size="3" min="0" max="100" id="plExt" class="courseInput"/> %</label></td>
+    </tr>
+    <tr>
+      <td>Matematyka</td><td>Rozszerzony</td><td><label><input type="text" maxlength="3" size="3" min="0" max="100" id="mathExt" class="courseInput"/> %</label></td>
+    </tr>
+    <tr>
+      <td>WOS</td><td>Rozszerzony</td><td><label><input type="text" maxlength="3" size="3" min="0" max="100" id="wosExt" class="courseInput"/> %</label></td>
+    </tr>
+    <tr class="infoInput infoInputCourseNotCount">
+      <td colspan="3">Wyniki z części ustnej nie są brane pod uwagę na tej uczelni</td>
+    </tr>
+    
+
+  </table>
+  </form>
+</div>
+
+</div> <!--inputs-->
+
+<div class="scores">
+  
+  <span id="scoresOutput"></span>
+  
+</div> <!--scores-->
+
+<div class="courses">
+  
+<div class="container">
+    <table class="course-table courseTableOutput">
+      <tr class="">
+        <td class="outputLP">L.p</td><td>Wydział / Kierunek</td><td class="outputLP">Twoje pkt.</td><td class="outputLP">2015/16</td><td class="outputLP">2016/17</td><td class="outputLP">2017/18</td>
+      </tr>
+      
+      <!--WBISIA-->
+      
+      <tr class="outputZero wbisia courseOutputTitle">
+        <td>1</td><td>WBISIA</td><td colspan="4" class="outputLM">WYDZIAŁ BUDOWNICTWA, INŻYNIERII ŚRODOWISKA I ARCHITEKTURY</td>
+      </tr>
+      <tr class="outputZero wbisia" id="wbisiaArchitektura">
+        <td>1.1</td><td>Architektura<span class="additionalExam">*Obowiązuje egzamin wstępny</span></td><td>--</td><td>445</td><td>465</td><td>578</td>
+      </tr>
+      <tr class="outputZero wbisia" id="wbisiaBudownictwo">
+        <td>1.2</td><td>Budownictwo</td><td>--</td><td>188</td><td>153</td><td>203</td>
+      </tr>
+      <tr class="outputZero wbisia" id="wbisiaOchronaSrodowiska">
+        <td>1.3</td><td>Ochrona Środowiska</td><td>--</td><td>120</td><td>107</td><td>174</td>
+      </tr>
+      <tr class="outputZero wbisia" id="wbisiaInzynieriaSrodowiska">
+        <td>1.4</td><td>Inżynieria Środowiska</td><td>--</td><td>119</td><td>128</td><td>106</td>
+      </tr>
+      <tr class="outputZero wbisia" id="wbisiaBiogospodarka">
+        <td>1.5</td><td>Biogospodarka</td><td>--</td><td colspan="3"><span class="noInfo">Brak informacji o progach</span></td>
+      </tr>
+      
+      <tr class="scoresYearRow">
+        <td></td><td></td><td>Twoje pkt.</td><td>2015/16</td><td>2016/17</td><td>2017/18</td>
+      </tr>
+      
+      <!--WBMIL-->
+      
+      <tr class="outputZero wbmil courseOutputTitle">
+        <td>2</td><td>WBMIL</td><td colspan="4">WYDZIAŁ BUDOWY MASZYN I LOTNICTWA</td>
+      </tr>
+      <tr class="outputZero wbmil wbmilInzynieriaMaterialowa" id="wbmilInzynieriaMaterialowa">
+        <td>2.1</td><td>Inżynieria materiałowa</td><td>--</td><td>134</td><td>319,5</td><td>152</td>
+      </tr>
+      <tr class="outputZero wbmil wbmilLotnictwoIKosmonautyka" id="wbmilLotnictwoIKosmonautyka">
+        <td>2.2</td><td>Lotnictwo i kosmonautyka</td><td>--</td><td>272</td><td>280</td><td>344</td>
+      </tr>
+      <tr class="outputZero wbmil wbmilMechanikaIBudowaMaszyn" id="wbmilMechanikaIBudowaMaszyn">
+        <td>2.3</td><td>Mechanika i budowa maszyn (Rzeszów)</td><td>--</td><td>197</td><td>175</td><td>192</td>
+      </tr>
+      <tr class="outputZero wbmil wbmilMechatronika" id="wbmilMechatronika">
+        <td>2.4</td><td>Mechatronika</td><td>--</td><td>198</td><td>155</td><td>231</td>
+      </tr>
+      <tr class="outputZero wbmil wbmilTransport" id="wbmilTransport">
+        <td>2.5</td><td>Transport</td><td>--</td><td>103</td><td>120</td><td>162</td>
+      </tr>
+      <tr class="outputZero wbmil wbmilZarzadzanieIInzynieriaProdukcji" id="wbmilZarzadzanieIInzynieriaProdukcji">
+        <td>2.6</td><td>Zarządzanie i inżynieria produkcji (Rzeszów)</td><td>--</td><td>168</td><td>140</td><td>210</td>
+      </tr>
+      
+      <tr class="scoresYearRow">
+        <td></td><td></td><td>Twoje pkt.</td><td>2015/16</td><td>2016/17</td><td>2017/18</td>
+      </tr>
+      
+      <!--WCH-->
+      
+      <tr class="outputZero wch courseOutputTitle">
+        <td>3</td><td>WCH</td><td colspan="4">WYDZIAŁ CHEMICZNY</td>
+      </tr>
+      <tr class="outputZero wch wchBiotechnologia" id="wchBiotechnologia">
+        <td>3.1</td><td>Biotechnologia</td><td>--</td><td>114</td><td>120</td><td>159</td>
+      </tr>
+      <tr class="outputZero wch wchInzynieriaChemiczna" id="wchInzynieriaChemiczna">
+        <td>3.2</td><td>Inżynieria chemiczna i procesowa</td><td>--</td><td>101</td><td>116</td><td>178</td>
+      </tr>
+      <tr class="outputZero wch wchTechnologiaChemiczna" id="wchTechnologiaChemiczna">
+        <td>3.3</td><td>Technologia Chemiczna</td><td>--</td><td>109</td><td>108</td><td>130</td>
+      </tr>
+      
+      <tr class="scoresYearRow">
+        <td></td><td></td><td>Twoje pkt.</td><td>2015/16</td><td>2016/17</td><td>2017/18</td>
+      </tr>
+      
+      <!--WEII-->
+      
+      <tr class="outputZero weii courseOutputTitle">
+        <td>4</td><td>WEII</td><td colspan="4">WYDZIAŁ ELEKTROTECHNIKI I INFORMATYKI</td>
+      </tr>
+      <tr class="outputZero weii weiiAutomatykaIRobotyka" id="weiiAutomatykaIRobotyka">
+        <td>4.1</td><td>Automatyka i robotyka</td><td id="weiiAutomatykaIRobotyka">--</td><td>244</td><td>244</td><td>311</td>
+      </tr>
+      <tr class="outputZero weii weiiElektronikaITelekomunikacja" id="weiiElektronikaITelekomunikacja">
+        <td>4.2</td><td>Elektronika i telekomunikacja</td><td>--</td><td>131</td><td>121</td><td>184</td>
+      </tr>
+      <tr class="outputZero weii weiiElektrotechnika" id="weiiElektrotechnika">
+        <td>4.3</td><td>Elektrotechnika</td><td>--</td><td>123</td><td>125</td><td>212</td>
+      </tr>
+      <tr class="outputZero weii weiiEnergetyka" id="weiiEnergetyka">
+        <td>4.4</td><td>Energetyka</td><td>--</td><td>133</td><td>112</td><td>193</td>
+      </tr>
+      <tr class="outputZero weii weiiInformatyka" id="weiiInformatyka">
+        <td>4.5</td><td>Informatyka</td><td>--</td><td>277</td><td>288</td><td>356</td>
+      </tr>
+      
+      <tr class="scoresYearRow">
+        <td></td><td></td><td>Twoje pkt.</td><td>2015/16</td><td>2016/17</td><td>2017/18</td>
+      </tr>
+      
+      <!--WMIFS-->
+      
+      <tr class="outputZero wmifs courseOutputTitle">
+        <td>5</td><td>WMIFS</td><td colspan="4">WYDZIAŁ MATEMATYKI I FIZYKI STOSOWANEJ</td>
+      </tr>
+      <tr class="outputZero wmifs wmifsInzynieriaMedyczna" id="wmifsInzynieriaMedyczna">
+        <td>5.1</td><td>Inżynieria medyczna</td><td>--</td><td>90</td><td>152</td><td>120</td>
+      </tr>
+      <tr class="outputZero wmifs wmifsMatematyka" id="wmifsMatematyka">
+        <td>5.2</td><td>Matematyka</td><td>--</td><td>148</td><td>148</td><td>134</td>
+      </tr>
+      
+      <tr class="scoresYearRow">
+        <td></td><td></td><td>Twoje pkt.</td><td>2015/16</td><td>2016/17</td><td>2017/18</td>
+      </tr>
+      
+      <!--WMT-->
+      
+      <tr class="outputZero wmt courseOutputTitle">
+        <td>6</td><td>WMT</td><td colspan="4">WYDZIAŁ MECHANICZNO - TECHNOLOGICZNY</td>
+      </tr>
+      <tr class="outputZero wmt wmtMechanikaIBudowaMaszyn" id="wmtMechanikaIBudowaMaszyn">
+        <td>6.1</td><td>Mechanika i budowa maszyn (Rzeszów)</td><td>--</td><td>197</td><td>175</td><td>192</td>
+      </tr>
+      <tr class="outputZero wmt wmtZarzadzanieIInzynieriaProdukcji" id="wmtZarzadzanieIInzynieriaProdukcji">
+        <td>6.2</td><td>Zarządzanie i inżynieria produkcji</td><td>--</td><td>168</td><td>140</td><td>210</td>
+      </tr>
+      
+      <tr class="scoresYearRow">
+        <td></td><td></td><td>Twoje pkt.</td><td>2015/16</td><td>2016/17</td><td>2017/18</td>
+      </tr>
+      
+      <!--WZ-->
+  
+      <tr class="outputZero wz courseOutputTitle">
+        <td>7</td><td>WZ</td><td colspan="4">WYDZIAŁ ZARZĄDZANIA</td>
+      </tr>
+      <tr class="outputZero wz wzBezpieczenstwoWewnetrzne" id="wzBezpieczenstwoWewnetrzne">
+        <td>7.1</td><td>Bezpieczeństwo wewnętrzne</td><td>--</td><td>125</td><td>97</td><td>178,5</td>
+      </tr>
+      <tr class="outputZero wz wzFinanseIRachunkowosc" id="wzFinanseIRachunkowosc">
+        <td>7.2</td><td>Finanse i rachunkowość</td><td>--</td><td>197</td><td>207</td><td>326</td>
+      </tr>
+      <tr class="outputZero wz wzLogistyka" id="wzLogistyka">
+        <td>7.3</td><td>Logistyka</td><td>--</td><td>163</td><td>186</td><td>321</td>
+      </tr>
+      <tr class="outputZero wz wzSport" id="wzSport">
+        <td>7.4</td><td>Sport</td><td colspan="4"><span class="noInfo">Brak informacji o sposobie liczenia punktów i o progach</span></td>
+      </tr>
+      <tr class="outputZero wz wzZarzadzanie" id="wzZarzadzanie">
+        <td>7.5</td><td>Zarządzanie</td><td>--</td><td>98</td><td>50</td><td>244</td>
+      </tr>
+      
+      <tr class="scoresYearRow">
+        <td></td><td></td><td>Twoje pkt.</td><td>2015/16</td><td>2016/17</td><td>2017/18</td>
+      </tr>
+      
+    </table>
+  </div>
+  
+</div> <!--courses-->
+
+<div class="footer">
+<div class="container">
+    <p>Copyright 2018 by Vabes. Wszelkie prawa zastrzeżone. Kopiowanie bez pozwolenia zabronione.</p>
+</div>
+</div>
+
+<script type="text/javascript" src="calcScript.js"></script>
+
+</body>
+</html>
