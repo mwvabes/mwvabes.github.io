@@ -256,8 +256,7 @@ a {
 .logo {
   margin: 0px auto;
   max-height: 160px;
-  text-align: center;
-  margin-bottom: 20px; }
+  text-align: center; }
 
 .info > a {
   color: #132b7e; }
