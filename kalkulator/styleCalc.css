@@ -435,4 +435,41 @@ ul {
   margin: 0px auto;
   padding: 15px; }
 
+.goTo {
+  color: #7b7b7b;
+  width: 100%;
+  margin-top: 20px; }
+
+.goTo > .container {
+  text-align: center;
+  color: #132b7e;
+  background-color: #f4f4f4; }
+
+.goTo > .container > a {
+  padding: 10px;
+  color: #FFF;
+  font-weight: bold;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 10px;
+  background: #db2b2b;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #db2b2b 0%, #ce4040 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #db2b2b 0%, #ce4040 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #db2b2b 0%, #ce4040 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db2b2b', endColorstr='#c66f6f',GradientType=0 );
+  /* IE6-9 */
+  border: 1px solid #8e0000;
+  -webkit-transition: all 140ms linear;
+  -moz-transition: all 140ms linear;
+  -o-transition: all 140ms linear;
+  -ms-transition: all 140ms linear;
+  transition: all 140ms linear; }
+
+.goTo > .container > a:hover {
+  background: #bc0101; }
+
 /*# sourceMappingURL=styleCalc.css.map */
