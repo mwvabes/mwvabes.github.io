@@ -74,14 +74,32 @@ a {
   margin: 0px auto; }
 
 .courseTableOutput {
-  width: 100%; }
+  width: 100%;
+  table-layout: auto; }
 
-.outputLP {
-  width: -moz-min-content; }
+.courseTableOutput, td {
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: -o-available;
+  width: -m-available; }
 
-.outputLM {
-  width: -moz-max-content; }
-
+/*.outputLP {
+  width: -moz-min-content;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: -o-min-content;
+  width: -ms-min-content;
+}*/
+/*.outputLPP {
+  table-layout: fixed;
+}*/
+/*.outputLM {
+  width: -moz-max-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: -o-max-content;
+  width: -ms-max-content;
+}*/
 @media only screen and (max-width: 720px) {
   .course-table {
     width: 100%; } }
