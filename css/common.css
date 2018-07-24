@@ -2,10 +2,16 @@ body {
    background-color: #212121;
    color: #ffffff;
    font-family: 'Roboto', sans-serif;
+   margin-bottom: 60px;
 }
 
 a {
    color: yellow;
+}
+
+.imgLink {
+  max-width: 70%;
+  margin: 0px auto;
 }
 
 .text-center {
@@ -13,7 +19,7 @@ a {
 }
 
 .footer {
-   position: absolute;
+   position: fixed;
    bottom: 0;
    width: 100%;
    min-height: 60px;
