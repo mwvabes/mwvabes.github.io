@@ -206,7 +206,7 @@ a:hover {
   margin: auto;
 }
 
-.portfolioElementImage:hover {
+.portfolioElementImage > img:hover {
   background-color: rgba(39, 39, 39, 0.4);
   -webkit-transition:background-color .2s linear;
   -moz-transition:background-color .2s linear;
