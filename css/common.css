@@ -170,20 +170,19 @@ a:hover {
   padding-bottom: 5px;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: #d0d0d0;
+  background-color: #ff0076;
   text-decoration: none;
   font-size: 12px;
   text-transform: uppercase;
+  margin-top: 5px;
+  color: #FFF;
+  border-radius: 5px;
 }
 
 .portfolioElementTechnologies {
   font-size: 10px;
   color: #dedede;
   background-color: #535353;
-/*  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 2px;
-  padding-right: 2px;*/
   padding: 2px;
   display: inline-block;
   margin: 0px auto;
@@ -198,6 +197,11 @@ a:hover {
   border-radius: 0px 0px 15px 15px;
   background-color: #4b4b4b;
   padding: 10px;
+  color: #ff0076;
+}
+
+.portfolioElementGoTo > p {
+  margin-bottom: 0;
 }
 
 
