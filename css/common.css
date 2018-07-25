@@ -222,15 +222,16 @@ a:hover {
 
 .portfolioElementGoTo {
   border-radius: 0px 0px 15px 15px;
-  background-color: #4b4b4b;
+  background-color: #ff0076;
   padding: 10px;
-  color: #ff0076;
+  color: #FFF;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .portfolioElementGoTo:hover {
   text-decoration: none;
-  background-color: #6f6f6f;
+  background-color: #d4166e;
   -webkit-transition:background-color .2s linear;
   -moz-transition:background-color .2s linear;
   -o-transition:background-color .2s linear;
