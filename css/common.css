@@ -154,10 +154,19 @@ a:hover {
 .portfolioElementTitle {
   border-radius: 15px 15px 0px 0px;
   background-color: #626262;
+  padding: 10px;
+}
+
+.portfolioElementTechnologies {
+  font-size: 10px;
+  color: #dedede;
+  background-color: #535353;
+  padding: 5px;
 }
 
 .portfolioElementImage {
   height: 400px;
+  overflow: hidden;
 }
 
 .portfolioElementGoTo {
