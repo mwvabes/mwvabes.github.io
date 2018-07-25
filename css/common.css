@@ -165,7 +165,7 @@ a:hover {
   margin-bottom: 0px;
 }
 
-.portfolioElementTitle > a {
+.portfolioElementTitle > p > a {
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 10px;
@@ -180,10 +180,11 @@ a:hover {
   font-size: 10px;
   color: #dedede;
   background-color: #535353;
-  padding-top: 5px;
+/*  padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 2px;
-  padding-right: 2px;
+  padding-right: 2px;*/
+  padding: 2px;
   display: inline-block;
   margin: 0px auto;
 }
