@@ -147,6 +147,8 @@ a:hover {
 
 .portfolioElement {
   width: calc(100% - 5px);
+  overflow: hidden;
+  text-align: center;
 }
 
 .portfolioElementTitle {
@@ -156,7 +158,11 @@ a:hover {
 
 .portfolioElementGoTo {
   border-radius: 0px 0px 15px 15px;
+  background-color: #4b4b4b;
+  padding: 10px;
 }
+
+
 
 
 
