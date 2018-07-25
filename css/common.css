@@ -172,11 +172,11 @@ a:hover {
   padding-right: 10px;
   background-color: #ff0076;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 8px;
   text-transform: uppercase;
-  margin-top: 5px;
   color: #FFF;
   border-radius: 5px;
+  font-weight: bold;
 }
 
 .portfolioElementTechnologies {
@@ -186,6 +186,7 @@ a:hover {
   padding: 2px;
   display: inline-block;
   margin: 0px auto;
+  margin-bottom: 5px;
 }
 
 .portfolioElementImage {
@@ -198,6 +199,17 @@ a:hover {
   background-color: #4b4b4b;
   padding: 10px;
   color: #ff0076;
+  text-transform: uppercase;
+}
+
+.portfolioElementGoTo:hover {
+  text-decoration: none;
+  background-color: #6f6f6f;
+  -webkit-transition:background-color .2s linear;
+  -moz-transition:background-color .2s linear;
+  -o-transition:background-color .2s linear;
+  -ms-transition:background-color .2s linear;
+  transition:background-color .2s linear
 }
 
 .portfolioElementGoTo > p {
