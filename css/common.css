@@ -216,6 +216,10 @@ a:hover {
   margin-bottom: 0;
 }
 
+.portfolioElementGoTo > p:hover {
+  text-decoration: none;
+}
+
 
 
 
