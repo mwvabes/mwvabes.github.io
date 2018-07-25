@@ -181,6 +181,11 @@ a:hover {
   font-weight: bold;
 }
 
+.portfolioSubtitle > a {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 .portfolioElementTechnologies {
   font-size: 10px;
   color: #dedede;
