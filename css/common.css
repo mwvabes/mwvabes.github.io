@@ -153,6 +153,10 @@ a:hover {
   margin-bottom: 20px;
 }
 
+.portfolioElement > a {
+  text-decoration: none;
+}
+
 .portfolioElementTitle {
   border-radius: 15px 15px 0px 0px;
   background-color: #626262;
@@ -166,13 +170,11 @@ a:hover {
 }
 
 .portfolioElementTitle > p > a {
-  padding-top: 5px;
-  padding-bottom: 5px;
   padding-left: 10px;
   padding-right: 10px;
   background-color: #ff0076;
   text-decoration: none;
-  font-size: 8px;
+  font-size: 10px;
   text-transform: uppercase;
   color: #FFF;
   border-radius: 5px;
