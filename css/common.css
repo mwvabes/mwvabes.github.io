@@ -145,6 +145,19 @@ a:hover {
    }
 }
 
+.portfolioElement {
+  width: calc(100% - 5px);
+}
+
+.portfolioElementTitle {
+  border-radius: 15px 15px 0px 0px;
+  background-color: #626262;
+}
+
+.portfolioElementGoTo {
+  border-radius: 0px 0px 15px 15px;
+}
+
 
 
 
