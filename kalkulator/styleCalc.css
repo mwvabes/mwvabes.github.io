@@ -308,7 +308,8 @@ ul {
 .noInfo {
   color: #132b7e;
   padding: 2px 5px 2px 5px;
-  background-color: #f4f4f4; }
+  background-color: #f4f4f4;
+  border: 1px solid #adadad; }
 
 .outRed {
   color: #bc0101; }
@@ -321,7 +322,8 @@ ul {
   padding: 2px 5px 2px 5px;
   color: #132b7e;
   background-color: #e2e2e2;
-  margin-left: 5px; }
+  margin-left: 5px;
+  border: 1px solid #adadad; }
 
 .footer {
   font-size: 0.75rem;
