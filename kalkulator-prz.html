@@ -10,7 +10,8 @@
   <title>PRz | Kalkulator by Vabes</title>
   
   <link rel="stylesheet" href="kalkulator/styleCalc.css" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700" rel="stylesheet">
+  <!--<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700" rel="stylesheet">-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700i" rel="stylesheet"> 
 
 </head>
@@ -35,6 +36,7 @@
   </div>
 </div>
 
+<!--
 <div class="container toRow">
   <div class="row">
     <div class="alert">
@@ -55,12 +57,24 @@
         <a href="kalkulator-instrukcja.html">Zobacz instrukcję</a>
     </div>
   </div>
-</div>
+</div>-->
 
 <div class="quote">
   <div class="container">
-    <p class="quoteContent">„Ucz się tak, jakbyś niczego jeszcze nie osiągnął, i lękaj się, byś nie stracił tego, co już osiągnąłeś.”</p>
-    <p class="quoteAuthor">- Konfucjusz</p>
+    <p class="quoteContent">„Wiedzę możemy zdobywać od innych, ale mądrości musimy nauczyć się sami.”</p>
+    <p class="quoteAuthor">- Adam Mickiewicz</p>
+  </div>
+</div>
+
+<div class="info1Big">
+  <div class="container">
+      <span>Wypełnij pola poniżej swoimi wynikami w procentach. Zjedź niżej, aby zobaczyć swoje punkty rekrutacyjne.</span>
+  </div>
+</div>
+
+<div class="seeMore">
+  <div class="container">
+    <a href="kalkulator-instrukcja.html"><button>Instrukcja / Więcej informacji</button></a>
   </div>
 </div>
 
@@ -144,13 +158,18 @@
   
 </div> <!--scores-->
 
-<div class="info1">
+
+<div class="footerInfo">
   <div class="container">
-    <span>Brak informacji o punktach z rekrutacji na rok akademicki 2018/19.</span>
-  </div>
-  
-  <div class="container">
-    <span>Aktualność informacji o progach punktowych i kierunkach: 1 lipca 2018.</span>
+    <div class="info1">
+      <div class="container">
+        <span>Brak informacji o progach z rekrutacji na rok akademicki 2018/19.</span>
+      </div>
+      
+      <div class="container">
+        <span>Aktualność informacji o progach punktowych i kierunkach: 1 lipca 2018.</span>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -159,7 +178,10 @@
 <div class="container">
     <table class="course-table courseTableOutput">
       <tr class="">
-        <td class="outputLPP" scope="row">L.p</td><td>Wydział / Kierunek</td><td class="outputLP">Twoje pkt.</td><td class="outputLP">2015/16</td><td class="outputLP">2016/17</td><td class="outputLP">2017/18</td>
+        <td class="outputLPP" scope="row">L.p</td><td>Wydział / Kierunek</td><td class="outputLP">Twoje pkt.</td>
+        <td class="outputLP">2015/16</td>
+        <td class="outputLP">2016/17</td>
+        <td class="outputLP">2017/18</td>
       </tr>
       
       <!--WBISIA-->
@@ -199,7 +221,7 @@
         <td>2.2</td><td>Lotnictwo i kosmonautyka</td><td>--</td><td>272</td><td>280</td><td>344</td>
       </tr>
       <tr class="outputZero wbmil wbmilMechanikaIBudowaMaszyn" id="wbmilMechanikaIBudowaMaszyn">
-        <td>2.3</td><td>Mechanika i budowa maszyn (Rzeszów)</td><td>--</td><td>197</td><td>175</td><td>192</td>
+        <td>2.3</td><td>Mechanika i budowa maszyn <span class="noInfo">Rzeszów</span></td><td>--</td><td>197</td><td>175</td><td>192</td>
       </tr>
       <tr class="outputZero wbmil wbmilMechatronika" id="wbmilMechatronika">
         <td>2.4</td><td>Mechatronika</td><td>--</td><td>198</td><td>155</td><td>231</td>
@@ -208,7 +230,7 @@
         <td>2.5</td><td>Transport</td><td>--</td><td>103</td><td>120</td><td>162</td>
       </tr>
       <tr class="outputZero wbmil wbmilZarzadzanieIInzynieriaProdukcji" id="wbmilZarzadzanieIInzynieriaProdukcji">
-        <td>2.6</td><td>Zarządzanie i inżynieria produkcji (Rzeszów)</td><td>--</td><td>168</td><td>140</td><td>210</td>
+        <td>2.6</td><td>Zarządzanie i inżynieria produkcji <span class="noInfo">Rzeszów</span></td><td>--</td><td>168</td><td>140</td><td>210</td>
       </tr>
       
       <tr class="scoresYearRow">
@@ -281,7 +303,7 @@
         <td>6</td><td>WMT</td><td colspan="4">WYDZIAŁ MECHANICZNO - TECHNOLOGICZNY</td>
       </tr>
       <tr class="outputZero wmt wmtMechanikaIBudowaMaszyn" id="wmtMechanikaIBudowaMaszyn">
-        <td>6.1</td><td>Mechanika i budowa maszyn (Rzeszów)</td><td>--</td><td>197</td><td>175</td><td>192</td>
+        <td>6.1</td><td>Mechanika i budowa maszyn <span class="noInfo">Rzeszów</span></td><td>--</td><td>197</td><td>175</td><td>192</td>
       </tr>
       <tr class="outputZero wmt wmtZarzadzanieIInzynieriaProdukcji" id="wmtZarzadzanieIInzynieriaProdukcji">
         <td>6.2</td><td>Zarządzanie i inżynieria produkcji</td><td>--</td><td>168</td><td>140</td><td>210</td>
@@ -326,12 +348,15 @@
     <p>
       Pamiętaj, aby nie kierować się w całości wynikiem pokazywanym przez Kalkulator. Progi punktowe oraz poziom rekrutacji zależą również od popytu na dany kierunek w danym roku, poziomu trudności matury, czy ilości miejsc, która z roku na rok może się zmieniać.
     </p>
+    <p class="footerInfoPWarning">
+      Informacje o progach punktowych mają charakter jedynie informacyjny.
+    </p>
   </div>
 </div>
 
 <div class="footer">
 <div class="container">
-    <p>Copyright 2018 by Vabes | Marcin Wielgos. Wszelkie prawa zastrzeżone. Kopiowanie bez pozwolenia zabronione.  <a href="https://github.com/mwvabes/studies-calculator" target="_blank">Repozytorium</a></p>
+    <p>&copy; Copyright 2018-2019 by <a href="http://vabes.pl">Vabes | Marcin Wielgos</a>. Wszelkie prawa zastrzeżone. Kopiowanie bez pozwolenia zabronione.  <a href="https://github.com/mwvabes/studies-calculator" target="_blank">Repozytorium</a></p>
 </div>
 </div>
 
