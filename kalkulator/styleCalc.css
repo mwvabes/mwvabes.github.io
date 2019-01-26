@@ -45,6 +45,9 @@ h6 {
 a {
   color: #087e48; }
 
+a:hover {
+  color: #132b7e; }
+
 ul {
   padding-right: 40px; }
 
@@ -353,7 +356,7 @@ table.course-table > tbody > tr:nth-child(1) > td:nth-child(3) {
 .additionalExam {
   padding: 2px 5px 2px 5px;
   color: #132b7e;
-  background-color: #f4f4f4;
+  background-color: #ebebeb;
   border: 1px solid #ff2f2f; }
 
 .footer {
@@ -389,7 +392,8 @@ table.course-table > tbody > tr:nth-child(1) > td:nth-child(3) {
   font-size: 0.75rem;
   padding: 2px 5px 2px 5px;
   color: #132b7e;
-  background-color: #e2e2e2; }
+  background-color: #e2e2e2;
+  border: 1px solid #adadad; }
 
 .menu {
   color: #7b7b7b;
@@ -450,7 +454,7 @@ table.course-table > tbody > tr:nth-child(1) > td:nth-child(3) {
 
 .welcomeInfo > .container {
   text-align: center;
-  color: #132b7e;
+  color: #7b7b7b;
   background-color: #f4f4f4; }
 
 .footerInfo > .container {
@@ -537,6 +541,9 @@ table.course-table > tbody > tr:nth-child(1) > td:nth-child(3) {
   text-align: center; }
 
 .footerInfo > .container > p.footerInfoPWarning {
+  color: #bc0101; }
+
+.InfoPWarning {
   color: #bc0101; }
 
 .seeMore > .container > a > button {
