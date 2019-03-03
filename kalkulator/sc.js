@@ -278,7 +278,7 @@ function wbisiaArchitektura(){
 function wbisiaBiogospodarka(){
     let out=document.getElementById("wbisiaBiogospodarka");
     let output=out.childNodes[3];
-    et scores=plBB()+langBEh()+mathBE()+histE();
+    let scores=plBB()+langBEh()+mathBE()+histE();
     if(scores==0)scores="--";
     output.innerHTML=scores
 }
