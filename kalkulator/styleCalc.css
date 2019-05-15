@@ -168,14 +168,14 @@ table.course-table > tbody > tr.outputZero > td:nth-child(2) {
   .toRow {
     display: flex; }
 
-  .alert {
+  /*.alert {
     margin-right: 5px;
     height: 100%;
     float: left;
     width: calc(80% - 5px); }
 
   .alert > h5 {
-    margin-top: 20px; }
+    margin-top: 20px; }*/
 
   .goTo {
     width: 20%;
@@ -406,13 +406,22 @@ table.course-table > tbody > tr:nth-child(1) > td:nth-child(3) {
   text-align: center; }
 
 .alert {
-  color: #7b7b7b;
+  color: #ddd7c1;
   text-align: center;
-  background-color: #ffd37f; }
+  background-color: #891b52;
+  margin-bottom: 10px;
+}
+
+.alert > * > a {
+    color: #ffb100;
+}
+
+.alert > * > a:hover {
+    color: #ff8000;
+}
 
 .alert > h5 {
   text-align: center;
-  color: #8e0000;
   max-width: 80%;
   margin: 0px auto;
   padding-top: 20px;
@@ -420,8 +429,9 @@ table.course-table > tbody > tr:nth-child(1) > td:nth-child(3) {
 
 .alert > p {
   text-align: center;
-  color: #132b7e;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  font-weight: bold;
+}
 
 .quote {
   color: #7b7b7b;
