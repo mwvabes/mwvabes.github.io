@@ -406,10 +406,10 @@ table.course-table > tbody > tr:nth-child(1) > td:nth-child(3) {
   text-align: center; }
 
 .alert {
-  color: #ddd7c1;
+  color: #e3e3e3;
   text-align: center;
-  background-color: #891b52;
-  margin-bottom: 10px;
+  background-color: #3e1088;
+  margin-bottom: 5px;
 }
 
 .alert > * > a {
@@ -424,7 +424,7 @@ table.course-table > tbody > tr:nth-child(1) > td:nth-child(3) {
   text-align: center;
   max-width: 80%;
   margin: 0px auto;
-  padding-top: 20px;
+  padding-top: 10px;
   font-weight: 400; }
 
 .alert > p {
