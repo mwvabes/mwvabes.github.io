@@ -47,6 +47,27 @@ var academics = ["wbisiaArchitektura",
 
 var yearColumns = 3;
 
+var alertsTd = document.querySelectorAll(".borderAlert");
+
+function alertingTds(alertsTd) {
+        setInterval(function(){
+            for (i = 0; i<alertsTd.length; i++) {
+                alertsTd[i].classList.remove("borderAlert");
+            }
+            },1600);
+        setTimeout(function() {
+            setInterval(function(){
+                for (i = 0; i<alertsTd.length; i++) {
+                    alertsTd[i].classList.add("borderAlert");
+                }
+            },1600);
+        },800);
+
+    
+}
+
+    alertingTds(alertsTd);
+
 function colourScores(courseccc) {
     let courseForColour=document.getElementById(courseccc);
     let score=parseFloat(courseForColour.childNodes[3].innerHTML);
@@ -502,6 +523,10 @@ function unFilled(input){
             setTimeout(function(){
                 spanAlert.style.opacity=""},800)}
 }
+
+
+
+
 
 document.addEventListener('DOMContentLoaded',function(){
     courseTable.addEventListener("keyup",function(){score()},!1)

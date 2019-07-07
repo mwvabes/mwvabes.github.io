@@ -338,7 +338,12 @@ table.course-table > tbody > tr:nth-child(1) > td:nth-child(3) {
   padding: 0px;
   color: #adadad;
   background-color: #ebebeb;
+  border: 1px solid #e2e2e2;
   border-bottom: 5px solid #e2e2e2; }
+
+.borderAlert > p {
+  visibility: hidden;
+}
 
 .noInfo {
   color: #132b7e;
@@ -406,10 +411,28 @@ table.course-table > tbody > tr:nth-child(1) > td:nth-child(3) {
   text-align: center; }
 
 .alert {
-  color: #e3e3e3;
+  color: #f0f0f0;
   text-align: center;
-  background-color: #3e1088;
+  background-color: #b20e40;
   margin-bottom: 5px;
+  padding: 5px;
+}
+
+.alertN {
+  color: #bc1b2e;
+  font-weight: bold;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.info1 > .container > .alertSpan {
+    background-color: #d40e0e;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.alertRed {
+    background-color: #801320;
 }
 
 .alert > * > a {
