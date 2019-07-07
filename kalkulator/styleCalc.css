@@ -431,6 +431,13 @@ table.course-table > tbody > tr:nth-child(1) > td:nth-child(3) {
     color: #FFF;
 }
 
+.alertUl {
+  background-color: #dedede;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #7b7b7b;
+}
+
 .alertRed {
     background-color: #801320;
 }
