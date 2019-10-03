@@ -203,6 +203,11 @@ table.course-table > tbody > tr.outputZero > td:nth-child(2) {
   h6 {
     font-size: 1.15rem; }
 
+  p.alertN {
+    margin: 2px;
+    padding: 2px;
+  }
+
   .course-table {
     width: 100%; }
 
