@@ -46,6 +46,37 @@
   }
 }
 
+#loadingScreen {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-color: #005f08;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #eeeeee;
+  -webkit-transition: opacity 175ms ease-in-out;
+  transition: opacity 175ms ease-in-out;
+}
+
+#loadingScreen > * {
+  margin-bottom: 10px;
+}
+
 :root {
   font-size: 16px;
 }
@@ -86,13 +117,13 @@ p {
 }
 
 a {
-  color: #ffee00;
+  color: #fff898;
   -webkit-transition: color 175ms ease-in-out;
   transition: color 175ms ease-in-out;
 }
 
 a:hover {
-  color: #555555;
+  color: #fffbe7;
 }
 
 nav {
@@ -159,6 +190,15 @@ main > div {
 
 .welcomeMessage {
   font-size: 2rem;
+}
+
+.howToUseInfo {
+  font-size: .8rem;
+  padding: 2px;
+  background-color: #feffdf;
+  color: #494949;
+  margin-bottom: 2px;
+  border: 1px solid #d64f00;
 }
 
 .container {
@@ -309,6 +349,15 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  #citySelection {
+    width: 90vw;
+  }
+  .city {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   footer {
     text-align: center;

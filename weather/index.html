@@ -18,13 +18,19 @@
 
 <body>
 
-  <nav><div>Weather App</div><div class="clock"></div></nav>
+  <div id="loadingScreen"><div class="loader">Ładowanie...</div><p>Ładowanie aplikacji...</p></div>
+
+  <nav>
+    <div>Weather App</div>
+    <div class="clock"></div>
+  </nav>
   <main>
     <div>
       <div class="container appHeader">
         <h1 class="welcomeMessage"></h1>
+        <h2 class="howToUseInfo">Podaj kod pocztowy lub miasto i naciśnij Enter</h2>
         <div class="hintContainer">
-          <input id="citySelection" type="text" placeholder="Wpisz kod pocztowy i naciśnij Enter" autocomplete="off" autofocus>
+          <input id="citySelection" type="text" placeholder="np. Warszawa" autocomplete="off" autofocus>
           <div id="cityHint">
             <p>City1</p>
             <p>City2</p>
@@ -32,12 +38,11 @@
         </div>
       </div>
       <ul id="addedCities">
-      
+
       </ul>
 
     </div>
-    <footer>&copy; 2020 by Marcin Wielgos. All rights reserved. Weather API: <a
-        href="https://openweathermap.org/">https://openweathermap.org/</a></footer>
+    <footer>&copy; <span class="footerYear"></span> by Marcin Wielgos. Informacje pogodowe dostarcza: <a href="https://openweathermap.org/">https://openweathermap.org/</a></footer>
   </main>
 
 </body>
