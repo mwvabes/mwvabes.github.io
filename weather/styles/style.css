@@ -332,8 +332,16 @@ main > div {
 
 .removeCity {
   color: #9b9b9b;
-  text-decoration: line-through;
   font-size: .8rem;
+  padding: 4px;
+  text-decoration: underline;
+  cursor: pointer;
+  -webkit-transition: color 175ms ease-in-out;
+  transition: color 175ms ease-in-out;
+}
+
+.removeCity:hover {
+  color: #494949;
 }
 
 footer {

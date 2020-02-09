@@ -22,6 +22,7 @@ let createCityHeading = function (li, headingText) {
   removeCityDiv.classList.add("removeCity");
   let removeCitySpan = document.createElement("span");
   removeCitySpan.innerHTML = "Usuń";
+  removeCitySpan.setAttribute("onclick", "removeCityFromList(this);");
   removeCityDiv.appendChild(removeCitySpan);
   divHeader.appendChild(removeCityDiv);
 
@@ -87,6 +88,7 @@ let setUpWeatherInfo = function (receivedData, li) {
 
 let addCity = function () {
   let inputValue = document.getElementById("citySelection").value;
+  document.getElementById("citySelection").value = "";
   let addedCities = document.getElementById("addedCities");
   let ul = document.getElementById("list");
   let li = document.createElement("li");
@@ -157,6 +159,12 @@ let switchLoadingScreen = function (shouldEnable = " ") {
     window.getComputedStyle(loadingScreen).getPropertyValue("opacity") == 0 ? switchLoadingScreen(true) : switchLoadingScreen(false);
   }
 
+};
+
+let removeCityFromList = function (elem) {
+  let cityOnList = elem.parentNode.parentNode.parentNode;
+  cityOnList.parentNode.removeChild(cityOnList);
+  
 };
 
 document.getElementById("citySelection").addEventListener('keypress', function (e) {
