@@ -436,6 +436,14 @@ footer {
   color: #0e0e0e;
 }
 
+@media only screen and (min-width: 700px) {
+  main > div {
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   .appHeader {
     -webkit-box-orient: vertical;
