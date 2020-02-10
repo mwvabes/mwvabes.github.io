@@ -12,10 +12,10 @@
   font-size: .15rem;
   position: relative;
   text-indent: -9999em;
-  border-top: 1.1em solid #ff88006e;
-  border-right: 1.1em solid #ff88006e;
-  border-bottom: 1.1em solid #ff88006e;
-  border-left: 1.1em solid #ff7300;
+  border-top: 1.1em solid #b8b8b8;
+  border-right: 1.1em solid #b8b8b8;
+  border-bottom: 1.1em solid #b8b8b8;
+  border-left: 1.1em solid #519bce;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-animation: load8 1.1s infinite linear;
@@ -74,6 +74,10 @@
 
 #loadingScreen > * {
   margin-bottom: 10px;
+}
+
+.loadingEmojis {
+  font-size: 3rem;
 }
 
 :root {

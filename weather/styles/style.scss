@@ -17,10 +17,10 @@ $blue: #519bce;
   font-size: .15rem;
   position: relative;
   text-indent: -9999em;
-  border-top: 1.1em solid #ff88006e;
-  border-right: 1.1em solid #ff88006e;
-  border-bottom: 1.1em solid #ff88006e;
-  border-left: 1.1em solid #ff7300;
+  border-top: 1.1em solid #b8b8b8;
+  border-right: 1.1em solid #b8b8b8;
+  border-bottom: 1.1em solid #b8b8b8;
+  border-left: 1.1em solid $blue;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
@@ -71,6 +71,10 @@ $blue: #519bce;
 
 #loadingScreen>* {
   margin-bottom: 10px;
+}
+
+.loadingEmojis {
+  font-size: 3rem;
 }
 
 :root {
