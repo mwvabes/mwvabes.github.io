@@ -261,10 +261,16 @@ let dynamicallyRefresh = function () {
 
 }
 
+let beginCityAdding = function () {
+  let inputValue = document.getElementById("citySelection").value;
+  if (inputValue.length > 0) {
+    addCity(inputValue);
+  } 
+}
+
 document.getElementById("citySelection").addEventListener('keypress', function (e) {
   if (e.key === 'Enter') {
-    let inputValue = document.getElementById("citySelection").value;
-    addCity(inputValue);
+    beginCityAdding();
   }
 });
 

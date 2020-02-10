@@ -18,7 +18,11 @@
 
 <body>
 
-  <div id="loadingScreen"><div class="loader">Ładowanie...</div><p class="loadingEmojis">&#9928;&#9928;&#9928;</p><p>Ładowanie aplikacji...</p></div>
+  <div id="loadingScreen">
+    <div class="loader">Ładowanie...</div>
+    <p class="loadingEmojis">&#9928;&#9928;&#9928;</p>
+    <p>Ładowanie aplikacji...</p>
+  </div>
 
   <nav>
     <div>Weather App</div>
@@ -29,10 +33,13 @@
       <div class="container appHeader">
         <h1 class="welcomeMessage"></h1>
         <div class="container">
-          <h2 class="howToUseInfo">Podaj kod pocztowy lub miasto i naciśnij Enter</h2>
+          <h2 class="howToUseInfo">Podaj kod pocztowy lub miasto</h2>
         </div>
-        <div class="hintContainer">
-          <input id="citySelection" type="text" placeholder="np. Warszawa" autocomplete="off" autofocus>
+        <div class="searchContainer">
+          <div class="inputs">
+            <input id="citySelection" type="text" placeholder="np. Warszawa lub 00-001" autocomplete="off" autofocus>
+            <button onclick="beginCityAdding();">Szukaj</button>
+          </div>
           <div id="cityHint">
             <p>City1</p>
             <p>City2</p>
@@ -49,7 +56,8 @@
       </ul>
 
     </div>
-    <footer>&copy; <span class="footerYear"></span> by Marcin Wielgos. Informacje pogodowe dostarcza: <a href="https://openweathermap.org/">https://openweathermap.org/</a></footer>
+    <footer>&copy; <span class="footerYear"></span> by Marcin Wielgos. Informacje pogodowe dostarcza: <a
+        href="https://openweathermap.org/">https://openweathermap.org/</a></footer>
   </main>
 
 </body>

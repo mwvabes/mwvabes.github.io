@@ -142,7 +142,7 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.2rem;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.1);
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -176,11 +176,11 @@ main > div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 700px;
   background-color: #eee;
   border-radius: 10px;
   -webkit-box-shadow: 0 1px 5px #ccc;
           box-shadow: 0 1px 5px #ccc;
+  width: 100%;
 }
 
 .container {
@@ -240,6 +240,44 @@ main > div {
   margin-left: 5px;
 }
 
+.inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 30px;
+}
+
+.inputs > input {
+  -webkit-box-flex: 8;
+      -ms-flex: 8;
+          flex: 8;
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+
+.inputs > button {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  background-color: #519bce;
+  color: #FFF;
+  border-radius: 5px;
+  border: 1px solid #2b7cc7;
+  margin-left: 5px;
+  -webkit-transition: background-color 175ms ease-in-out;
+  transition: background-color 175ms ease-in-out;
+}
+
+.inputs > button:hover {
+  background-color: #2b5dc7;
+}
+
 .welcomeMessage {
   font-size: 2rem;
   font-weight: bold;
@@ -250,9 +288,8 @@ main > div {
   margin-bottom: 2px;
 }
 
-#citySelection {
-  width: 400px;
-  height: 30px;
+.searchContainer {
+  width: 100%;
 }
 
 #cityHint {
@@ -440,15 +477,15 @@ footer {
   color: #0e0e0e;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 714px) {
   main > div {
-    width: 100%;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    max-width: 700px;
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 714px) {
   .appHeader {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -462,9 +499,6 @@ footer {
   main > div {
     margin: 7px;
     max-width: calc(100vw - 14px);
-  }
-  #citySelection {
-    width: 90vw;
   }
   .city {
     -webkit-box-orient: vertical;

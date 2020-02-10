@@ -131,7 +131,7 @@ nav {
   flex-direction: row;
   align-items: center;
   font-size: 1.2rem;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.1);
   justify-content: space-between;
 }
 
@@ -148,10 +148,10 @@ main {
 main>div {
   display: flex;
   flex-direction: column;
-  max-width: $maxWidth;
   background-color: #eee;
   border-radius: 10px;
   box-shadow: 0 1px 5px #ccc;
+  width: 100%;
 }
 
 .container {
@@ -192,6 +192,33 @@ main>div {
   margin-left: 5px;
 }
 
+.inputs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 30px;
+}
+
+.inputs > input {
+  flex: 8;
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+
+.inputs > button {
+  flex: 2;
+  background-color: $blue;
+  color: #FFF;
+  border-radius: 5px;
+  border: 1px solid #2b7cc7;
+  margin-left: 5px;
+  transition: background-color 175ms ease-in-out;
+}
+
+.inputs > button:hover {
+  background-color: #2b5dc7;
+}
+
 .welcomeMessage {
   font-size: 2rem;
   font-weight: bold;
@@ -202,9 +229,8 @@ main>div {
   margin-bottom: 2px;
 }
 
-#citySelection {
-  width: 400px;
-  height: 30px;
+.searchContainer {
+  width: 100%;
 }
 
 #cityHint {
@@ -344,14 +370,14 @@ footer {
   color: #0e0e0e;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 714px) {
   main > div {
-    width: 100%;
     flex-wrap: wrap;
+    max-width: $maxWidth;
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 714px) {
   .appHeader {
     flex-direction: column;
   }
@@ -365,9 +391,9 @@ footer {
     max-width: calc(100vw - 14px);
   }
 
-  #citySelection {
-    width: 90vw;
-  }
+  // #citySelection {
+  //   width: 90vw;
+  // }
 
   .city {
     flex-direction: column-reverse;
