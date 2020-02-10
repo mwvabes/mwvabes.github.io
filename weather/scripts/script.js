@@ -4,6 +4,13 @@ let searchCity = function () {
   //console.log(inputValue);
 };
 
+let removeAllCities = function () {
+
+  localStorage.removeItem("cities");
+  dynamicallyRefresh();
+
+};
+
 let createCityHeading = function (li, headingText) {
   let divHeader = document.createElement("div");
   divHeader.classList.add("container");
@@ -11,10 +18,14 @@ let createCityHeading = function (li, headingText) {
   li.classList.add(headingText);
   let cityBasicInfo = document.createElement("div");
   cityBasicInfo.classList.add("cityBasicInfo");
-  let h2 = document.createElement("h2");
+  let h2CityName = document.createElement("h2");
+  let h2WeatherName = document.createElement("h2");
+  h2CityName.classList.add("cityName");
+  h2WeatherName.classList.add("weatherName");
   let h3 = document.createElement("h3");
-  h2.innerHTML = headingText;
-  cityBasicInfo.appendChild(h2);
+  h2CityName.innerHTML = headingText;
+  cityBasicInfo.appendChild(h2CityName);
+  cityBasicInfo.appendChild(h2WeatherName);
   cityBasicInfo.appendChild(h3);
   divHeader.appendChild(cityBasicInfo);
 
@@ -40,7 +51,7 @@ let createCityLoader = function (li) {
   li.appendChild(divContent);
 };
 
-let getWeatherInfo = function (inputValue, li) {
+let getWeatherInfo = function (inputValue, li, addToLocalStorage = true) {
 
   let getRequest = new XMLHttpRequest();
   let regexZipcode = new RegExp("^\\d\\d-\\d\\d\\d$");
@@ -55,7 +66,7 @@ let getWeatherInfo = function (inputValue, li) {
   getRequest.onload = function () {
     let receivedData = getRequest.responseText;
     setTimeout(function () {
-      setUpWeatherInfo(receivedData, li);
+      setUpWeatherInfo(receivedData, li, addToLocalStorage);
     }, 1000);
 
   };
@@ -63,18 +74,24 @@ let getWeatherInfo = function (inputValue, li) {
 
 };
 
-let setUpWeatherInfo = function (receivedData, li) {
+let setUpWeatherInfo = function (receivedData, li, addToLocalStorage = true) {
   receivedData = JSON.parse(receivedData);
   if (receivedData.cod == 404) {
     li.querySelector(".specificInfo").innerHTML = "Nie znaleziono miasta";
     return;
   }
-  li.querySelector("h2").innerHTML = receivedData.name + ", " + receivedData.weather[0].description;
+
+  if (addToLocalStorage) {
+    addCityToLocalStorage(receivedData);
+  }
+
+  li.querySelector("h2.cityName").innerHTML = receivedData.name;
+  li.querySelector("h2.weatherName").innerHTML = receivedData.weather[0].description;
   li.querySelector(".specificInfo").innerHTML =
     '<div class="specificInfoLeft">' +
     '<p>Ciśnienie <span>' + receivedData.main.pressure + ' hPa</span></p>' +
-    '<p>Wilgotność <span>' + receivedData.main.humidity + '</span></p>' +
-    '<p>Wiatr <span>' + receivedData.wind.speed + '</span><img src="/wind.png" alt="" class="windImg" style="transform: rotate(' + receivedData.wind.deg + 'deg"></p>' +
+    '<p>Wilgotność <span>' + receivedData.main.humidity + ' %</span></p>' +
+    '<p>Wiatr <span>' + receivedData.wind.speed + 'm/s</span><img src="/wind.png" alt="" class="windImg" style="transform: rotate(' + receivedData.wind.deg + 'deg"></p>' +
     '</div>' +
     '<div class="specificInfoRight">' +
     '<p class="degrees">' +
@@ -86,8 +103,8 @@ let setUpWeatherInfo = function (receivedData, li) {
     '</div>';
 };
 
-let addCity = function () {
-  let inputValue = document.getElementById("citySelection").value;
+let addCity = function (inputValue, addToLocalStorage = true) {
+
   document.getElementById("citySelection").value = "";
   let addedCities = document.getElementById("addedCities");
   let ul = document.getElementById("list");
@@ -99,7 +116,7 @@ let addCity = function () {
   addedCities.appendChild(li);
   li.style.opacity = 1;
 
-  getWeatherInfo(inputValue, li);
+  getWeatherInfo(inputValue, li, addToLocalStorage);
 };
 
 let setClock = function () {
@@ -144,6 +161,22 @@ let setClock = function () {
 
 };
 
+let addCityToLocalStorage = function (receivedData) {
+  let storedCities;
+  if (localStorage.getItem("cities") == undefined || localStorage.getItem("cities").length == 0) {
+    localStorage.setItem("cities", {});
+    storedCities = [];
+  } else {
+    storedCities = JSON.parse(localStorage.getItem("cities"));
+  }
+
+  storedCities.push({
+    "name": receivedData.name
+  });
+
+  localStorage.setItem("cities", JSON.stringify(storedCities));
+}
+
 let switchLoadingScreen = function (shouldEnable = " ") {
   let loadingScreen = document.getElementById("loadingScreen");
 
@@ -163,13 +196,75 @@ let switchLoadingScreen = function (shouldEnable = " ") {
 
 let removeCityFromList = function (elem) {
   let cityOnList = elem.parentNode.parentNode.parentNode;
+  let cityNameToRemove = cityOnList.querySelector(".cityName").innerHTML;
   cityOnList.parentNode.removeChild(cityOnList);
-  
+
+  console.log(cityOnList);
+
+  //remove from local storage
+  let storedCities;
+  if (!(localStorage.getItem("cities") === null) || localStorage.getItem("cities") != undefined) {
+    if (localStorage.getItem("cities").length != 0) {
+      storedCities = JSON.parse(localStorage.getItem("cities"));
+      console.log("To remove " + storedCities.indexOf({
+        "name": cityNameToRemove
+      }) + " " + cityNameToRemove);
+
+      for (let i = 0; i < storedCities.length; i++) {
+        if (storedCities[i].name == cityNameToRemove) {
+          //storedCities.splice(i,1);
+          storedCities = storedCities.filter(city => city.name != cityNameToRemove);
+          //console.log(storedCities[i].name + " " + i);
+        }
+      }
+
+
+      localStorage.setItem("cities", JSON.stringify(storedCities));
+      // document.getElementById("addedCities").innerHTML = " ";
+      // for (city of storedCities) {
+      //   addCity(city.name, false);
+      //   console.log(city.name);
+      // }
+    }
+  }
+
+  // if (localStorage.getItem("cities") == undefined || localStorage.getItem("cities").length == 0) {
+  //   localStorage.setItem("cities", {});
+  //   storedCities = [];
+  // } else {
+  //   storedCities = JSON.parse(localStorage.getItem("cities"));
+  // }
+
+  // storedCities.push({
+  //   "name": receivedData.name
+  // });
+
+  // 
+
 };
+
+let dynamicallyRefresh = function () {
+
+  let storedCities;
+  if (!(localStorage.getItem("cities") === null) || localStorage.getItem("cities") != undefined) {
+    if (localStorage.getItem("cities").length != 0) {
+      storedCities = JSON.parse(localStorage.getItem("cities"));
+      document.getElementById("addedCities").innerHTML = " ";
+      for (city of storedCities) {
+        addCity(city.name, false);
+        console.log(city.name);
+      }
+    }
+  } else {
+    document.getElementById("addedCities").innerHTML = "";
+  }
+
+}
 
 document.getElementById("citySelection").addEventListener('keypress', function (e) {
   if (e.key === 'Enter') {
-    addCity();
+    let inputValue = document.getElementById("citySelection").value;
+    addCity(inputValue);
   }
 });
 
@@ -179,6 +274,7 @@ document.getElementById("citySelection").addEventListener("input", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   setClock();
+  dynamicallyRefresh();
   setTimeout(function () {
     switchLoadingScreen();
   }, 500);

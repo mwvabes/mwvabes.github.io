@@ -18,7 +18,7 @@
 
 <body>
 
-  <div id="loadingScreen"><div class="loader">Ładowanie...</div><p>Ładowanie aplikacji...</p></div>
+  <div id="loadingScreen"><div class="loader">Ładowanie...</div><p>&#129409;Ładowanie aplikacji...</p></div>
 
   <nav>
     <div>Weather App</div>
@@ -28,7 +28,9 @@
     <div>
       <div class="container appHeader">
         <h1 class="welcomeMessage"></h1>
-        <h2 class="howToUseInfo">Podaj kod pocztowy lub miasto i naciśnij Enter</h2>
+        <div class="container">
+          <h2 class="howToUseInfo">Podaj kod pocztowy lub miasto i naciśnij Enter</h2>
+        </div>
         <div class="hintContainer">
           <input id="citySelection" type="text" placeholder="np. Warszawa" autocomplete="off" autofocus>
           <div id="cityHint">
@@ -36,6 +38,11 @@
             <p>City2</p>
           </div>
         </div>
+      </div>
+      <div class="container subHeader">
+        <span></span>
+        <span class="dynamicRefreshSpan" onclick="removeAllCities();">Usuń wszystkie</span>
+        <span class="dynamicRefreshSpan" onclick="dynamicallyRefresh();">Odśwież</span>
       </div>
       <ul id="addedCities">
 
