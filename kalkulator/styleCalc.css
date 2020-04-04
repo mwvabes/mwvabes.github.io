@@ -416,11 +416,15 @@ table.course-table > tbody > tr:nth-child(1) > td:nth-child(3) {
   text-align: center; }
 
 .alert {
-  color: #f0f0f0;
+  color: #ffc2c2;
   text-align: center;
-  background-color: #b20e40;
+  background-color: #d1003f;
   margin-bottom: 5px;
   padding: 5px;
+}
+
+.alert a {
+  color: #FFF;
 }
 
 .alertN {
@@ -445,14 +449,6 @@ table.course-table > tbody > tr:nth-child(1) > td:nth-child(3) {
 
 .alertRed {
     background-color: #801320;
-}
-
-.alert > * > a {
-    color: #ffb100;
-}
-
-.alert > * > a:hover {
-    color: #ff8000;
 }
 
 .alert > h5 {
@@ -625,5 +621,23 @@ table.course-table > tbody > tr:nth-child(1) > td:nth-child(3) {
 
 table.course-table > tbody > tr:nth-child(1) > td {
   font-weight: 700; }
+
+  .alertSpan a {
+    color: #FFF;
+  }
+
+  .alertInstruction {
+    background-color: #d40019 !important;
+    color: #FFF !important;
+  }
+
+  .alertInstruction a {
+    color: #FFF !important;
+    font-weight: bold;
+  }
+
+  .alertInstruction a:hover {
+    color: #e0e0e0;
+  }
 
 /*# sourceMappingURL=styleCalc.css.map */
